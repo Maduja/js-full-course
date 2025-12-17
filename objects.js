@@ -1,18 +1,23 @@
 // //object declaring
 
 // let x ={}
-// let EngineOptions = "petrol, Diesel"
+let EngineOptions = "petrol, Diesel"
 
-// let car ={
-//     name:'Nexon',
-//     brand:'Tata',
-//     driveTrain:EngineOptions+', ev',
-//     "car color":'red',
-//     price:15,
-//     onRoadPrice(){
-//         return this.price+2
-//     }
-// }
+let car ={
+    name:'Nexon',
+    brand:'Tata',
+    driveTrain:EngineOptions+', ev',
+    "car color":'red',
+    price:15,
+    onRoadPrice(){
+        return this.price+2
+    }
+}
+for(key in car){
+    console.log(car[key])
+}
+//console.log('brand' in car)
+
 
 // // console.log(car)
 // // console.log(car["car color"])
@@ -30,15 +35,15 @@
 // console.log(car.onRoadPrice())
 
 
-let user={}
+// let user={}
 
-user={
-    fname:"maduja"
-}
+// user={
+//     fname:"maduja"
+// }
 
-console.log(user.fname)
-user['lname']='abhayasundara'
+// console.log(user.fname)
+// user['lname']='abhayasundara'
 
-console.log(user)
-delete user.lname
-console.log(user)
+// console.log(user)
+// delete user.lname
+// console.log(user)
