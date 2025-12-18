@@ -9,20 +9,41 @@
 // }
 
 //class
-class User{
-    // name = 'maduja'
-    // age = 25
+// class User{
+//     // name = 'maduja'
+//     // age = 25
 
-    constructor(name,age){
-        this.name = name
-        this.age = age
+//     constructor(name,age){
+//         this.name = name
+//         this.age = age
+//     }
+
+//     display(){
+//         console.log('Name :',this.name)
+//         console.log('Age: ',this.age)
+//     }
+// }
+
+// let madu = new User('siva',32)
+// madu.display() 
+
+
+
+class Student{
+    #name
+    age=14
+
+    get getname(){
+        return this.#name
     }
 
-    display(){
-        console.log('Name :',this.name)
-        console.log('Age: ',this.age)
+    set setname(name){
+        this.#name = name
     }
 }
 
-let madu = new User('siva',32)
-madu.display() 
+let std = new Student()
+std.setname = 'maduja'
+console.log(std.getname)
+console.log(std.age)
+
