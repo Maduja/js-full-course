@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+  </head>
+  <body>
+    <h2>ToDo List</h2>
+    <ul id="todolist"></ul>
+    <div>
+      <input id="addTask" type="text" />
+      <button id="submit">Add Task</button>
+    </div>
+    <h3>Completed</h3>
+    <ul id="donelist"></ul>
+  </body>
+  <script>
+    let btn = document.getElementById("submit");
+    let addTask = document.getElementById("addTask");
+    let todoList = document.getElementById("todolist");
+    let donelist = document.getElementById("donelist");
+
+    let list = new Array();
+
+    btn.addEventListener("click", (event) => {
+      if (addTask.value != "") {
+        //console.log(addTask.value); //if h1,p tags then .textContent
+        list.push(addTask.value);
+        //console.log(list);
+        //todoList.innerHTML +='<li id="' +(list.length - 1) +'">' +addTask.value +'<input type ="checkbox" ' +"</li>";
+        todoList.innerHTML +=
+          '<li id="' +
+          (list.length - 1) +
+          '">' +
+          '<button onclick="complete(' +
+          (list.length - 1) +
+          ')">' +
+          addTask.value +
+          "</button>" +
+          "</li>";
+
+        addTask.value = "";
+      }
+    });
+    function complete(id) {
+      donelist.innerHTML += "<li>" + list[id] + "</li>";
+      document.getElementById(id).style.display = "none";
+    }
+  </script>
+</html>
