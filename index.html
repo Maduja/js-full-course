@@ -6,25 +6,29 @@
     <title>Document</title>
   </head>
   <body>
-    <p>Hello</p>
-    <p>Hii</p>
+    <h1 id="head">code io</h1>
+    <div id="box" class="bb"></div>
   </body>
-  <!--<script src="/variables.js"></script>
   <script>
-    console.log("Happy to learning js");
-  </script>-->
-  <!--<script>
-    // let age = prompt("Enter your age", 16);
-    // console.log(age);
-    // console.log(typeof age);
+    //console.log(document.title);
+    // let element = document.getElementById("box");
+    // element.textContent += " YouTube channel";
+    // element.innerHTML = "<p>hello this is an innerhtml</p>";
+    // element.className = "bclass";
+    // element.style.color = "red";
+    // console.log(element.textContent);
 
-    // let input = confirm("are you a student? ");
-    // console.log(input);
+    //let element = document.getElementsByTagName("body");
+    //let element = document.getElementsByClassName("bb");
+    let element = document.querySelector("h1");
+    // //console.log(element[0]);
+    // console.log(element);
 
-    let input = prompt("Enter your name");
-    confirm(`is your name ${input}`);
-
-    //console.log(input)
-  </script>-->
-  <script src="/switch.js"></script>
+    let para = document.createElement("p");
+    para.textContent = "maduja verjini abhayasundara";
+    para.id = "name";
+    console.log(para);
+    element.append(para);
+    element.prepend(para);
+  </script>
 </html>
